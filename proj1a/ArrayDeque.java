@@ -1,34 +1,34 @@
-public class ArrayDeque<template> {
-    private template[] items;
+public class ArrayDeque<T> {
+    private T[] items;
     private int size;
     private int maxsize;
 
     //initializing
-    public AList() {
-        items = (template[]) new Object[8];
+    public ArrayDeque() {
+        items = (T[]) new Object[8];
         size = 0;
         maxsize = 8;
     }
 
     private void resize(int capacity) {
-        template[] a = (template[]) new Object[capacity];
+        T[] a = (T[]) new Object[capacity];
         System.arraycopy(items, 0, a, 0, size);
         items = a;
     }
 
-    public void addFirst(template item) {
+    public void addFirst(T item) {
         if (size == maxsize) {
             resize(maxsize * 2);
             maxsize *= 2;
         }
-        template[] a = (template[]) new Object[maxsize * 2];
+        T[] a = (T[]) new Object[maxsize * 2];
         System.arraycopy(items, 0, a, 1, size);
         a[0] = item;
         items = a;
         size += 1;
     }
 
-    public void addLast(template item) {
+    public void addLast(T item) {
         if (size == maxsize) {
             resize(maxsize * 2);
             maxsize *= 2;
@@ -54,29 +54,29 @@ public class ArrayDeque<template> {
         }
     }
 
-    public template removeFirst() {
+    public T removeFirst() {
         if (isEmpty()) {
             return null;
         }
-        template[] a = (template[]) new Object[size];
+        T[] a = (T[]) new Object[size];
         System.arraycopy(items, 1, a, 0, size - 1);
-        template b = items[0];
+        T b = items[0];
         items = a;
         size -= 1;
         return b;
     }
 
-    public template removeLast() {
+    public T removeLast() {
         if (isEmpty()) {
             return null;
         }
-        template b = items[size - 1];
-        items[size - 1] = 0;
+        T b = items[size - 1];
+        items[size - 1] = null;
         size -= 1;
         return b;
     }
 
-    public template get(int index) {
+    public T get(int index) {
         if (isEmpty()) {
             return null;
         }
