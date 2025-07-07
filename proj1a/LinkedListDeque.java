@@ -15,13 +15,6 @@ public class LinkedListDeque<T> {
     private int size;
     private IntNode sentinal;
 
-    public LinkedListDeque(T x) {   
-        sentinal = new IntNode(null,     null,     null);
-        sentinal.next = new IntNode(x,     sentinal,     sentinal);
-        sentinal.prev = sentinal.next;
-        size = 1;
-    }     
-
     public LinkedListDeque() {   
         sentinal = new IntNode(null,     null,     null);
         sentinal.next = sentinal;  // 指向自己
@@ -100,9 +93,8 @@ public class LinkedListDeque<T> {
         return p.item;
     }     
 
-    /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// 易错点1
-    private T getRecursiveHelper(int index,    IntNode current){   
+    private T getRecursiveHelper(int index,    IntNode current){
         // 如果当前是哨兵节点（链表结束）或 index 越界
         if (current == sentinal || index < 0) {   
             return null;
@@ -113,7 +105,7 @@ public class LinkedListDeque<T> {
         }     
         // 递归移动到下一个节点，同时减少 index
         return getRecursiveHelper(index - 1,   current.next);
-    }     
+    }
 
     public T getRecursive(int index) {   
         if (index < 0 || isEmpty()) {   
@@ -121,8 +113,7 @@ public class LinkedListDeque<T> {
         }     
         // 从哨兵的下一个节点开始递归
         return getRecursiveHelper(index,   sentinal.next);
-    }  
+    }
 
-    /// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}
 
-}     
