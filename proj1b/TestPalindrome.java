@@ -1,11 +1,12 @@
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class TestPalindrome {
     // You must use this palindrome, and not instantiate
     // new Palindromes, or the autograder might be upset.
     static Palindrome palindrome = new Palindrome();
-    OffByOne cc=new OffByOne();
+    OffByOne cc = new OffByOne();
 
     @Test
     public void testWordToDeque() {
@@ -60,8 +61,8 @@ public class TestPalindrome {
     public void testIsPalindromecc() {
         //Cool tests written by myself!
 
-        assertTrue(palindrome.isPalindrome("",cc));
-        assertTrue(palindrome.isPalindrome("a",cc));
+        assertTrue(palindrome.isPalindrome("", cc));
+        assertTrue(palindrome.isPalindrome("a", cc));
 
     }
 
@@ -69,8 +70,8 @@ public class TestPalindrome {
     public void testIsPalindromecc2() {
         //Cool tests written by myself!
 
-        assertTrue(palindrome.isPalindrome("radecbs",cc));
-        assertTrue(palindrome.isPalindrome("levdk",cc));
+        assertTrue(palindrome.isPalindrome("radecbs", cc));
+        assertTrue(palindrome.isPalindrome("levdk", cc));
 
     }
 
@@ -78,9 +79,9 @@ public class TestPalindrome {
     public void testIsPalindromecc3() {
         //Cool tests written by myself!
 
-        assertFalse(palindrome.isPalindrome("marasy8",cc));
-        assertFalse(palindrome.isPalindrome("animenz",cc));
-        assertFalse(palindrome.isPalindrome("furina",cc));
+        assertFalse(palindrome.isPalindrome("marasy8", cc));
+        assertFalse(palindrome.isPalindrome("animenz", cc));
+        assertFalse(palindrome.isPalindrome("furina", cc));
 
     }
 
@@ -88,8 +89,8 @@ public class TestPalindrome {
     public void testIsPalindromecc4() {
         //Cool tests written by myself!
 
-        assertTrue(palindrome.isPalindrome("abcb",cc));
-        assertTrue(palindrome.isPalindrome("catsbb",cc));
+        assertTrue(palindrome.isPalindrome("abcb", cc));
+        assertTrue(palindrome.isPalindrome("catsbb", cc));
 
     }
 }

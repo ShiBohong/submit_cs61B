@@ -1,4 +1,4 @@
-public class ArrayDeque<T> implements Deque<T>{
+public class ArrayDeque<T> implements Deque<T> {
     private T[] items;
     private int head;  // 指向第一个元素
     private int tail;  // 指向最后一个元素的下一个位置
