@@ -9,28 +9,29 @@ public class TestOffByOne {
     static CharacterComparator offByOne = new OffByOne();
 
     // Your tests go here.
-    Uncomment this class once you've created your CharacterComparator interface and OffByOne class. **/
+    Uncomment this class once you've created
+    your CharacterComparator interface and OffByOne class. **/
 
-    public static CharacterComparator obo = new OffByOne();
+    static CharacterComparator offByOne = new OffByOne();
 
     @Test
-    public void OffByOneTest() {
-        assertTrue(obo.equalChars('a', 'b'));
-        assertTrue(obo.equalChars('r', 'q'));
+    public void offByOneTest() {
+        assertTrue(offByOne.equalChars('a', 'b'));
+        assertTrue(offByOne.equalChars('r', 'q'));
     }
 
     @Test
-    public void OffByOneTest2() {
-        assertFalse(obo.equalChars('a', 'e'));
-        assertFalse(obo.equalChars('z', 'a'));
-        assertFalse(obo.equalChars('a', 'a'));
+    public void offByOneTest2() {
+        assertFalse(offByOne.equalChars('a', 'e'));
+        assertFalse(offByOne.equalChars('z', 'a'));
+        assertFalse(offByOne.equalChars('a', 'a'));
     }
 
     @Test
-    public void OffByOneTest3() {
-        assertTrue(obo.equalChars('&', '%'));
-        assertFalse(obo.equalChars('a', 'A'));
-        assertFalse(obo.equalChars(' ', '/'));
+    public void offByOneTest3() {
+        assertTrue(offByOne.equalChars('&', '%'));
+        assertFalse(offByOne.equalChars('a', 'A'));
+        assertFalse(offByOne.equalChars(' ', '/'));
     }
 
 
