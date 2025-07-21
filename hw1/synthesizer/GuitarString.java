@@ -40,7 +40,13 @@ public class GuitarString {
     public void tic() {
         double x = buffer.dequeue();
         double y = buffer.peek();
-        buffer.enqueue((x + y) / 2 * 0.996);
+        int z;
+        if (Math.random() > 0.5) {
+            z = 1;
+        } else {
+            z = -1;
+        }
+        buffer.enqueue((x + y) / 2 * 0.996*z);
     }
 
     /* Return the double at the front of the buffer. */
